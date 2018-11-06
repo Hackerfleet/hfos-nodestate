@@ -43,11 +43,11 @@ This software package is a plugin module for HFOS.
       install_requires=[
           'hfos>=1.2.0',
       ],
-      entry_points="""[hfos.components]
+      entry_points="""[isomer.components]
     nodestate=hfos.nodestate.manager:Nodestate
-    [hfos.schemata]
+    [isomer.schemata]
     nodestate=hfos.nodestate.nodestate:NodeState
-    [hfos.provisions]
+    [isomer.provisions]
     nodestates=hfos.nodestate.provisions.nodestates:provision
     """,
       test_suite="tests.main.main",

@@ -33,13 +33,13 @@ Module: Nodestate
 
 from circuits import Event
 
-from hfos.component import ConfigurableComponent, handler, authorizedevent
-from hfos.events.objectmanager import updatesubscriptions, objectchange
-from hfos.logger import warn, verbose
-from hfos.database import objectmodels
+from isomer.component import ConfigurableComponent, handler, authorized_event
+from isomer.events.objectmanager import updatesubscriptions, objectchange
+from isomer.logger import warn, verbose
+from isomer.database import objectmodels
 
 
-class toggle(authorizedevent):
+class toggle(authorized_event):
     pass
 
 
@@ -58,7 +58,7 @@ class Nodestate(ConfigurableComponent):
     """
     The Nodestate component monitors nodestate changes. It does not do much.
     """
-    channel = "hfosweb"
+    channel = 'isomer-web'
 
     configprops = {
     }

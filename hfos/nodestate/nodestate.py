@@ -36,8 +36,8 @@ NodeState: Nodestate object
 
 """
 
-from hfos.schemata.defaultform import lookup_field, editbuttons
-from hfos.schemata.base import base_object, uuid_object
+from isomer.schemata.defaultform import lookup_field, editbuttons
+from isomer.schemata.base import base_object, uuid_object
 
 NodeStateSchema = base_object('nodestate',
                               roles_write='admin',
