@@ -1,4 +1,4 @@
-@import '../../../scss/colors';
+@import '~scss/colors';
 
 .state-button {
   border-style: solid;
@@ -32,7 +32,6 @@
 .btn-disabled {
   color: $color-gray-dark;
 }
-
 
 .state-button-overlay {
   position: absolute;
