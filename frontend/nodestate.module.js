@@ -27,7 +27,7 @@ import './nodestate/nodestate.scss';
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
-import { routing } from './nodestate.config.js';
+import {routing} from './nodestate.config.js';
 
 import nodestatecomponent from './nodestate/nodestate';
 import template from './nodestate/nodestate.tpl.html';

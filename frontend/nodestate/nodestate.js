@@ -96,7 +96,7 @@ class Nodestate {
         });
 
 
-        self.scope.$on('$destroy', function() {
+        self.scope.$on('$destroy', function () {
             self.stopSubscriptions();
             self.clientconfigupdate();
             self.loginupdate();
@@ -118,8 +118,9 @@ class Nodestate {
             if (self.changetimeout !== null) {
                 self.timeout.cancel(self.changetimeout);
             }
-            self.changetimeout = self.timeout(function() {
-                self.storeMenuConfig(newVal, oldVal)}, 5000
+            self.changetimeout = self.timeout(function () {
+                    self.storeMenuConfig(newVal, oldVal)
+                }, 5000
             );
         };
 
@@ -143,7 +144,7 @@ class Nodestate {
 
         this.requestNodestates = function () {
             console.log('[STATE] Getting list of nodestates');
-            self.op.search('nodestate', '*', '*', null, true).then(function(msg) {
+            self.op.search('nodestate', '*', '*', null, true).then(function (msg) {
                 console.log('[STATE] States list incoming msg:', msg);
                 let states = msg.data.list;
 
@@ -159,12 +160,13 @@ class Nodestate {
             this.requestNodestates();
         }
 
-        this.stopObserved = function() {
+        this.stopObserved = function () {
             self.op.unsubscribe(Object.keys(self.nodestates));
         };
 
         console.log('[STATE] Starting');
     }
+
     toggle(uuid) {
         if (this.lockState) {
             console.log('[STATE] Not toggling');
