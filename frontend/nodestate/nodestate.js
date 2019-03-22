@@ -74,7 +74,6 @@ class Nodestate {
         this.stopSubscriptions = function () {
             console.log('[STATE] Finally destroying all subscriptions');
             self.stopObserved();
-            //self.socket.unlisten('hfos.navdata.sensors', self.handleNavdata);
         };
 
         this.statechange = self.rootscope.$on('$stateChangeStart',
@@ -172,7 +171,7 @@ class Nodestate {
         if (!state.disabled) {
             console.log('[STATE] Toggling:', state.active);
             let request = {
-                component: 'hfos.nodestate.manager',
+                component: 'isomer.nodestate.manager',
                 action: 'toggle',
                 data: uuid
             };
